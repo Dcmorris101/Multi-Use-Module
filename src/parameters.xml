@@ -1,0 +1,67 @@
+<params>
+  <parameter control-type='readme' id='Read_Me'><![CDATA[
+<b>Overview</b><br />
+<p>This is a module with multiple layout options that includes a summary, optional buttons, and media options in the content section with an icon section added on. These are split into sections referred to by "content" and "icons".</p>
+<p>The "content" includes the text and media selection while the "icons" contains the icon boxes. Using the "Overall_Layout" parameter will allow you to swap the content position so that it can be on the right, left, top, bottom, or be completely hidden. The icon section will adjust accordingly. The "Content_Layout" parameter adds granularity to the content layout, allowing you to have the media selection be above, below, to the left, or to the right of the text content. Being on the top/bottom or left/right will be determined by what "Overall_Layout" you have selected.<br>
+<p>
+<section data-target-param="Content_Layout">
+  <p>Layout 1: Media is set to the bottom or left of the text</p>
+  <p>Layout 2: Media is set to the top or right of the text</p>
+</section>
+</p>
+<p>
+EXAMPLE:<br>
+<img src="/repository/configfiles/templates/Modules/dynamicmodules/2020_09_28_Icon-Boxes-with-Placed-Content/img/thumbnail.png" /></p>
+
+
+ ]]></parameter>
+  <parameter data-type='advanced' control-type='plaintext' id='AdditionalClassNames'><![CDATA[]]></parameter>
+  <parameter control-type='options' options='~Colors~' id='Background_Color'><![CDATA[inherit]]></parameter>
+  <parameter data-type='advanced' control-type='options' options='~Containers~' id='Content_In_Container'><![CDATA[container]]></parameter>
+  <parameter data-type='advanced' control-type='options' options='~ContentWidths~' id='Content_Width'><![CDATA[container-8]]></parameter>
+  <parameter data-type='advanced' control-type='options' options='~FlexAlignmentsBasic~' id='Content_Alignment'><![CDATA[justify-center]]></parameter>
+  <parameter data-type='advanced' control-type='multi-options' options='~PaddingOptionsMulti~' id='Padding_Options'><![CDATA[padding-bottom80 padding-top80]]></parameter>
+  <parameter control-type='options' options='~Colors~' id='Text_Color'><![CDATA[dark-navy]]></parameter>
+  <parameter control-type='options' options='~TextAlignments~' id='Text_Align'><![CDATA[center]]></parameter>
+  <parameter control-type='richtext' id='Header_Summary'><![CDATA[]]></parameter>
+
+  <parameter control-type='options' options='content-left,content-right,content-top,content-bottom,icons-only' id='Overall_Layout'><![CDATA[content-left]]></parameter>
+  <parameter control-type='options' options='layout1,layout2' id='Content_Layout'><![CDATA[layout1]]></parameter>
+
+  <parameter control-type='richtext' id='Content_Text'><![CDATA[]]></parameter>
+
+  <parameter control-type='plaintext' id='PreButton_Text'><![CDATA[]]></parameter>
+  <parameter control-type='options' options='~Colors~' id='PreButton_Text_Color'><![CDATA[dark-navy]]></parameter>
+  <parameter control-type='options' options='~FlexAlignments~' id='PreButton_Text_Spacing'><![CDATA[justify-left]]></parameter>
+  <parameter data-type='advanced' control-type='options' options='~FlexAlignmentsBasic~' id='Button_Alignment'><![CDATA[justify-left]]></parameter>
+  <parameter control-type='options' options='~ButtonStyles~' id='Item1_Button_Style'><![CDATA[none]]></parameter>
+  <parameter parent-id='Item1_Button_Style' hide-parent-value='none' control-type='options' options='_self,_blank' id='Item1_Button_Open_Target'><![CDATA[_self]]></parameter>
+  <parameter parent-id='Item1_Button_Style' hide-parent-value='none' control-type='link' id='Item1_Button_URL'><![CDATA[]]></parameter>
+  <parameter parent-id='Item1_Button_Style' hide-parent-value='none' control-type='plaintext' id='Item1_Button_Link_Text'><![CDATA[Read More]]></parameter>
+  <parameter parent-id='Item1_Button_Style' hide-parent-value='none' control-type='options' options='~ButtonColors~' id='Item1_Button_Color'><![CDATA[Blue]]></parameter>
+
+  <parameter control-type='options' options='~ButtonStyles~' id='Item2_Button_Style'><![CDATA[none]]></parameter>
+  <parameter parent-id='Item2_Button_Style' hide-parent-value='none' control-type='options' options='_self,_blank' id='Item2_Button_Open_Target'><![CDATA[_self]]></parameter>
+  <parameter parent-id='Item2_Button_Style' hide-parent-value='none' control-type='link' id='Item2_Button_URL'><![CDATA[]]></parameter>
+  <parameter parent-id='Item2_Button_Style' hide-parent-value='none' control-type='plaintext' id='Item2_Button_Link_Text'><![CDATA[Read More]]></parameter>
+  <parameter parent-id='Item2_Button_Style' hide-parent-value='none' control-type='options' options='~ButtonColors~' id='Item2_Button_Color'><![CDATA[Blue]]></parameter>
+
+  <parameter control-type='image' id='Item_Image'><![CDATA[/img/_prod/galleries/Blog images/blog_citizen_developer.jpg]]></parameter>
+  <parameter control-type='options' options='none,image-popout,VidyardPopup' id='Type_Of_Media'><![CDATA[none]]></parameter>
+  <parameter parent-id='Type_Of_Media' show-parent-value='VidyardPopup' control-type='plaintext' id='Vidyard_Video_ID'><![CDATA[dka4VPUUz4QuTomPxAMeHK]]></parameter>
+  <parameter parent-id='Type_Of_Media' hide-parent-value='none' control-type='options' options='green,navy,white' id='Tooltip_Color'><![CDATA[green]]></parameter>
+  <parameter control-type='options' options='normal,overflow' id='Media_Containment'><![CDATA[normal]]></parameter>
+
+  <parameter control-type='options' options='~ColumnCount~' id='Number_of_Icon_Columns'><![CDATA[one]]></parameter>
+
+  <repeating id='repeating-content' data-index='2'>
+    <parameter repeating-id='repeating-content' control-type='image' id='Icon'><![CDATA[/img/_prod/galleries/Icons_Outline/icon_navy_analytics.svg]]></parameter>
+    <parameter repeating-id='repeating-content' control-type='plaintext' id='Icon_Alt'><![CDATA[]]></parameter>
+    <parameter repeating-id='repeating-content' control-type='plaintext' id='Icon_Title'><![CDATA[Title]]></parameter>
+    <parameter repeating-id='repeating-content' control-type='richtext' id='Icon_Summary'><![CDATA[Summary]]></parameter>
+    <parameter repeating-id='repeating-content' control-type='link' id='Icon_CTA'><![CDATA[#]]></parameter>
+    <parameter repeating-id='repeating-content' control-type='options' options='_self,_blank' id='Icon_Button_Open_Target'><![CDATA[_self]]></parameter>
+    <parameter repeating-id='repeating-content' control-type='link' id='Icon_Button_URL'><![CDATA[]]></parameter>
+  </repeating>
+
+</params>

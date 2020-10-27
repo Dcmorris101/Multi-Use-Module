@@ -1,0 +1,52 @@
+<section class="icon-boxes-content {{AdditionalClassNames}} {{Padding_Options}} bg-{{Background_Color}}">
+  <div class="{{Content_In_Container}} {{Content_Alignment}} text-{{Text_Color}} flex-box">
+    <div class="{{Content_Width}} layout-{{Overall_Layout}} layout">
+      <div class="top-section {{Text_Align}}-align pb60">
+        <p>
+          {{Header_Summary}}
+        </p>
+      </div>
+      <div class="bottom-section row">
+        <div class="content {{Content_Layout}} col-lg-7 offset-lg-1 flex-box">
+          <div class="content-text">
+            <div class="text large-p">
+              {{Content_Text}}
+            </div>
+            <div class="buttons flex-box {{Button_Alignment}}">
+              <div class="buttons-pretext">
+                <p class="prebutton-text {{PreButton_Text_Spacing}} flex-box text-{{PreButton_Text_Color}}">{{PreButton_Text}}</p>
+                <section class="repeating-children callout-columns auto button1-{{Item1_Button_Style}} button2-{{Item2_Button_Style}} flex-box" id="repeating-content-section">
+                  <div class="singleitem {{Item1_Button_Style}}">
+                    <div class="callout-box">
+                      <div class="icon-button center-align">
+                        <a href="{{Item1_Button_URL}}" class="button-primary {{Item1_Button_Style}} {{Item1_Button_Color}}" target="{{Item1_Button_Open_Target}}">{{Item1_Button_Link_Text}}</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="singleitem {{Item2_Button_Style}}">
+                    <div class="callout-box">
+                      <div class="icon-button center-align">
+                        <a href="{{Item2_Button_URL}}" class="button-primary {{Item2_Button_Style}} {{Item2_Button_Color}}" target="{{Item2_Button_Open_Target}}">{{Item2_Button_Link_Text}}</a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="open-popup content-media _{{Type_Of_Media}} contain-{{Media_Containment}}" data-video-id='{{Vidyard_Video_ID}}' data-popup-src=''>
+            <div class="popup-wrapper after-{{Tooltip_Color}}">
+              <img class="popup-image" src="{{Item_Image}}" />
+            </div>
+          </div>
+        </div>
+        <div class="icons col-lg-4 offset-lg-1">
+          <section class='repeating-children callout-columns {{Number_of_Icon_Columns}}' id='repeating-content'>
+            ~~repeating-content.html~~
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
